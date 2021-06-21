@@ -1,0 +1,57 @@
+nav.navbar{
+  margin: 0px;
+  padding: 0px;
+}
+
+.nav-item{
+  font-size: small;
+}
+
+small.d-flex{
+  font-size: 10px;
+}
+button > a{
+  text-decoration: none;
+}
+
+.pesquisar{
+  background-color: #252525;
+}
+
+::ng-deep .mat-menu-panel {
+  min-width: 64px!important;
+  background-color: #121212;
+}
+
+
+a > button{
+  height: 110%;
+  padding: 0px;
+  margin: 0px auto;
+  display: block;
+  position: relative;
+}
+
+.menu2{
+  list-style-type: none;
+  margin: 0px;
+  margin-top: 5px;
+  padding: 0px;
+  display: block;
+}
+
+.menu2 > li{
+  display: inline;
+  margin-right: 10px;
+}
+
+.form-control, #button-addon2{
+  background-color: #252525;
+  border: none;
+}
+
+input.form-control:focus{
+  box-shadow: none;
+  color: #fff;
+}
+

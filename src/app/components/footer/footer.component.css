@@ -1,0 +1,41 @@
+footer{
+  background-color: #202020;
+}
+
+.icon{
+  width: 35px !important;
+  height: 35px !important;
+  display: flex;
+  justify-content: center;
+}
+
+table{
+  color: #fff;
+  font-size: 16px;
+}
+
+td{
+  line-height: 1.2em;
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.copyright{
+  font-size: 13px;
+  text-align: justify;
+  color: #ccc;
+}
+
+.termos{
+  font-size: 15px;
+  color: #e7e7e7;
+  text-decoration: none;
+}
+
+.logo{
+  width: 29px;
+  height: 29px;
+}

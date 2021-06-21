@@ -1,0 +1,108 @@
+<div class="container-fluid mt-5 d-none d-lg-block">
+  <span>Novos e Populares</span>
+  <div class="row">
+    <div class="col novos me-4">
+      <h5 class="mt-4 mb-4">Novos Lançamentos</h5>
+      <div *ngFor="let jogo of jogosLancamento" class="row mb-3">
+        <div class="col-2">
+          <img [src]="jogo.capa" class="jogoLista">
+        </div>
+        <div class="col my-auto">
+          <h2 class="ms-3 p-0 m-0">{{ jogo.nome }}</h2>
+          <small class="badge bg-primary ms-3" *ngIf="jogo.id == 4">
+            {{ jogo.desconto }}
+          </small>
+          <del class="ms-3" *ngIf="jogo.id == 4">
+            {{ jogo.precoAntigo }}
+          </del>
+          <span class="ms-3 p-0 m-0">{{ jogo.preco }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col novos me-4">
+      <h5 class="mt-4 mb-4">Mais Vendidos</h5>
+      <div *ngFor="let jogo of jogosVendidos" class="row mb-3">
+        <div class="col-2">
+          <img [src]="jogo.capa" class="jogoLista">
+        </div>
+        <div class="col my-auto">
+          <h2 class="ms-3 p-0 m-0">{{ jogo.nome }}</h2>
+
+          <small class="badge bg-primary ms-3" *ngIf="jogo.id > 0">
+            {{ jogo.desconto }}
+          </small>
+
+          <del class="ms-3" *ngIf="jogo.id > 0">
+            {{ jogo.precoAntigo }}
+          </del>
+
+          <span class="ms-3 p-0 m-0">{{ jogo.preco }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col novos">
+      <h5 class="mt-4 mb-4">Em breve</h5>
+      <div *ngFor="let jogo of jogosEmBreve" class="row mb-3">
+        <div class="col-2">
+          <img [src]="jogo.capa" class="jogoLista">
+        </div>
+        <div class="col my-auto">
+          <h2 class="ms-3 p-0 m-0">{{ jogo.nome }}</h2>
+
+          <small class="badge bg-primary ms-3" *ngIf="jogo.id == 2">
+            {{ jogo.desconto }}
+          </small>
+
+          <del class="ms-3" *ngIf="jogo.id == 2">
+            {{ jogo.precoAntigo }}
+          </del>
+
+          <span class="ms-3 p-0 m-0">{{ jogo.preco }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-novos-populares-small class="d-bloco d-lg-none"></app-novos-populares-small>
+
+<div class="container-fluid">
+  <h2 class="mt-5">Novo na Epic Games Store</h2>
+  <div class="row row-cols-2 row-cols-md-5 g-4">
+    <div class="{{ jogo.id == 4 ? 'col d-none d-md-block' : 'col' }}" *ngFor="let jogo of jogosNovos">
+      <div class="card border-0">
+        <img [src]="jogo.capa" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">{{ jogo.nome }}</h5>
+          <span class="text-white-50"> {{ jogo.desenvolvedor }}</span>
+          <div class="row mt-3">
+            <div class="col">
+              <small class="badge bg-primary" *ngIf="jogo.id == 1">
+                {{ jogo.desconto }}
+              </small>
+              <del class="me-2 ms-2" *ngIf="jogo.id == 1">
+                {{ jogo.precoAntigo }}
+              </del>
+              <span class="card-text"> {{ jogo.preco }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="mt-5">Mais Populares</h2>
+  <div class="row row-cols-2 row-cols-md-5 g-4">
+    <div class="{{ jogo.id == 4 ? 'col d-none d-md-block' : 'col' }}" *ngFor="let jogo of jogosPopulares">
+      <div class="card border-0">
+        <img [src]="jogo.capa" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">{{ jogo.nome }}</h5>
+          <span class="text-white-50"> {{ jogo.desenvolvedor }}</span>
+          <p class="card-text mt-3"> {{ jogo.preco }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

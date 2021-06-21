@@ -1,0 +1,28 @@
+.card{
+  background-color: transparent !important;
+  border: none;
+  overflow: hidden;
+}
+
+.card-img-top{
+  height: 75%;
+  width: 100%;
+  border-radius: 5px !important;
+  display: block;
+}
+
+.card-title, .card-text{
+  font-size: medium !important;
+}
+
+.card-text{
+  display: none;
+}
+
+div > span{
+  font-size: small;
+}
+
+.precos{
+  font-size: 15px !important;
+}

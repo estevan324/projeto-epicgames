@@ -1,0 +1,26 @@
+.jogoLista{
+  width: 70px;
+  height: 100px;
+  border-radius: 5px;
+}
+
+.novos{
+  background-color: #202020;
+  border-radius: 10px;
+}
+
+h5{
+  font-size: 20px;
+}
+
+div.col > span{
+  font-size: 17px;
+}
+
+div.col > del{
+  font-size: 17px;
+}
+
+div.card{
+  background-color: transparent;
+}

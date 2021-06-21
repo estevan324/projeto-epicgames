@@ -1,0 +1,50 @@
+<div class="mt-5">
+  <h2 class="m-0 mb-3">Megapromoção</h2>
+</div>
+<div class="row row-cols-2 row-cols-md-5 g-4">
+  <div class="col" *ngFor="let jogo of jogos">
+    <div class="{{ jogo.id < 4 ? 'card' : 'card d-none d-md-block' }}">
+      <img [src]="jogo.imagem" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title m-0">{{ jogo.nome }}</h5>
+        <span class="card-text text-white-50 d-block mb-3">
+          {{ jogo.empresa }}
+        </span>
+        <p class="card-text">{{ jogo.descricao }}</p>
+        <div class="row">
+          <div class="col">
+            <span class="badge bg-primary">{{ jogo.desconto }}</span>
+            <span class="text-white-50 precos float-end">
+              <del>
+                {{ jogo.precoAntigo }}
+              </del>
+            </span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <span class="precos float-end">{{ jogo.preco }}</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div class="col">
+  <div class="card h-100 pb-2">
+    <img src="assets/promo/p3.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">The Flower Collectors</h5>
+      <p class="card-text">Barcelona, 1977. Um ex-policial em uma cadeira de rodas testemunha um assassinato e se junta a uma jovem jornalista ambiciosa para trazer a verdade à luz. Com a câmera, binóculos e transmissor em mãos, descubra os segredos da cidade neste mistério reflexivo de detetive.</p>
+      <p class="card-text"><small class="text-muted">Mi'pu'mi Games</small></p>
+      <div>
+        <span class="badge bg-primary">-45%</span>
+        <span>
+          <del>R$ 69,99</del>
+        </span>
+        <span>R$ 38,49</span>
+      </div>
+    </div>
+  </div>
+</div> -->

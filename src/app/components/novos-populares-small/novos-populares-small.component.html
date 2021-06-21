@@ -1,0 +1,75 @@
+<div class="container-fluid">
+  <h3 class="m-0 mt-5">Novos e Populares</h3>
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active novos">
+        <h5 class="mt-4 mb-4 ms-3">Novos Lançamentos</h5>
+        <div *ngFor="let jogo of jogosLancamento" class="row mb-3 ms-1">
+          <div class="col-2 me-2">
+            <img [src]="jogo.capa" class="jogoLista">
+          </div>
+          <div class="col my-auto">
+            <h4 class="ms-3 p-0 m-0">{{ jogo.nome }}</h4>
+            <small class="badge bg-primary ms-3" *ngIf="jogo.id == 4">
+              {{ jogo.desconto }}
+            </small>
+            <del class="ms-3" *ngIf="jogo.id == 4">
+              {{ jogo.precoAntigo }}
+            </del>
+            <span class="ms-3 p-0 m-0">{{ jogo.preco }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item novos">
+        <h5 class="mt-4 mb-4 ms-3">Mais Vendidos</h5>
+        <div *ngFor="let jogo of jogosVendidos" class="row mb-3 ms-1">
+          <div class="col-2 me-2">
+            <img [src]="jogo.capa" class="jogoLista">
+          </div>
+          <div class="col my-auto me-2">
+            <h4 class="ms-3 p-0 m-0">{{ jogo.nome }}</h4>
+
+            <small class="badge bg-primary ms-3" *ngIf="jogo.id > 0">
+              {{ jogo.desconto }}
+            </small>
+
+            <del class="ms-3" *ngIf="jogo.id > 0">
+              {{ jogo.precoAntigo }}
+            </del>
+
+            <span class="ms-3 p-0 m-0">{{ jogo.preco }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item novos">
+        <h5 class="mt-4 mb-4 ms-3">Em breve</h5>
+        <div *ngFor="let jogo of jogosEmBreve" class="row mb-3 ms-1">
+          <div class="col-2 me-2">
+            <img [src]="jogo.capa" class="jogoLista">
+          </div>
+          <div class="col my-auto">
+            <h4 class="ms-3 p-0 m-0">{{ jogo.nome }}</h4>
+
+            <small class="badge bg-primary ms-3" *ngIf="jogo.id == 2">
+              {{ jogo.desconto }}
+            </small>
+
+            <del class="ms-3" *ngIf="jogo.id == 2">
+              {{ jogo.precoAntigo }}
+            </del>
+
+            <span class="ms-3 p-0 m-0">{{ jogo.preco }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
